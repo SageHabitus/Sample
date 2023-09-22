@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Switchwon</string>
+    <string name="btn_showlist">리스트로 보기</string>
+    <string name="usd">USD</string>
+    <string name="jpy">JPY</string>
+    <string name="eur">EUR</string>
+
+    <string name="date">날짜</string>
+    <string name="time">시간</string>
+    <string name="currency_rate">환율</string>
+</resources>
