@@ -17,15 +17,6 @@ abstract class BaseViewModel<STATE : BaseUiState>(defaultState: STATE) : ViewMod
     private val _uiState = MutableStateFlow(defaultState)
     val uiState: StateFlow<STATE> = _uiState.asStateFlow()
 
-    fun ViewModel.launch(
-        context: CoroutineContext = Dispatchers.IO,
-        block: suspend CoroutineScope.() -> Unit
-    ): Job {
-        val exceptionHandler = CoroutineExceptionHandler { _, _ -> }
-
-        return this.viewModelScope.launch(context + exceptionHandler, block = block)
-    }
-
     protected fun updateState(transform: STATE.() -> STATE) {
         val newValue = _uiState.value.transform()
         if (_uiState.value != newValue) {
