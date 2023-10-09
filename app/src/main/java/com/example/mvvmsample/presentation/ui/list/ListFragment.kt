@@ -12,6 +12,7 @@ import androidx.navigation.navGraphViewModels
 import com.example.mvvmsample.R
 import com.example.mvvmsample.databinding.FragmentListBinding
 import com.example.mvvmsample.presentation.binding.BindingFragment
+import com.example.mvvmsample.presentation.extension.repeatOnStarted
 import com.example.mvvmsample.presentation.ui.MainActivityViewModel
 import com.example.mvvmsample.presentation.ui.list.recyclerview.CurrencyAdapter
 import dagger.hilt.android.AndroidEntryPoint

@@ -10,6 +10,7 @@ import com.example.mvvmsample.R
 import com.example.mvvmsample.databinding.FragmentGraphBinding
 import com.example.mvvmsample.presentation.binding.BindingFragment
 import com.example.mvvmsample.presentation.common.Currency
+import com.example.mvvmsample.presentation.extension.repeatOnStarted
 import com.example.mvvmsample.presentation.ui.MainActivityViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
