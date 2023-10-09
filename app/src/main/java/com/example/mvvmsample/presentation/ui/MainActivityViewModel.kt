@@ -8,12 +8,10 @@ import com.example.mvvmsample.data.repository.CurrencyRepository
 import com.example.mvvmsample.presentation.uistate.CurrencyItemUiState
 import com.example.mvvmsample.presentation.uistate.CurrencyUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
@@ -26,7 +24,7 @@ class MainActivityViewModel @Inject constructor(
     val uiState: StateFlow<CurrencyUiState> = _uiState.asStateFlow()
 
     fun getCurrencies(abbreviation: String = uiState.value.selectedCurrency) =
-        viewModelScope.launch(Dispatchers.IO) {
+        viewModelScope.launch {
             setCurrency(abbreviation)
 
             val dataModels = repository
@@ -36,11 +34,9 @@ class MainActivityViewModel @Inject constructor(
                 )
                 .getOrNull() ?: return@launch
 
-            withContext(Dispatchers.Main) {
-                _uiState.value = _uiState.value.copy(
-                    currencyItemUiState = CurrencyItemUiState.toUiState(dataModels)
-                )
-            }
+            _uiState.value = _uiState.value.copy(
+                currencyItemUiState = CurrencyItemUiState.toUiState(dataModels)
+            )
         }
 
     private fun setCurrency(abbreviation: String) {
