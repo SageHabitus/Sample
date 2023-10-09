@@ -1,2 +1,6 @@
-![image](https://github.com/SageHabitus/switchone/assets/45292707/78e105f1-bb57-4840-ac54-d660c4cb0bfc)
-![image](https://github.com/SageHabitus/switchone/assets/45292707/e89949eb-dca0-4029-b682-aa83993e716e)
+Google Architecture
+
+![image](https://github.com/SageHabitus/Sample/assets/45292707/a9ab97ee-3752-4321-92ec-f95a4d917c46)
+![image](https://github.com/SageHabitus/Sample/assets/45292707/a4a17a53-ad87-4eb2-b99e-d80487092b53)
+
+
