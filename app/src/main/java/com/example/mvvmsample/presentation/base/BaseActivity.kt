@@ -22,9 +22,4 @@ abstract class BaseActivity<B : ViewBinding>(
         binding = inflater(layoutInflater)
         setContentView(binding.root)
     }
-
-    protected fun AppCompatActivity.repeatOnStarted(block: suspend CoroutineScope.() -> Unit) =
-        lifecycleScope.launch {
-            lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED, block)
-        }
 }
