@@ -1,16 +1,11 @@
-package com.example.mvvmsample.presentation.base
+package com.example.mvvmsample.presentation.binding
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
 import androidx.viewbinding.ViewBinding
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
 
-abstract class BaseActivity<B : ViewBinding>(
+abstract class BindingActivity<B : ViewBinding>(
     private val inflater: (LayoutInflater) -> B
 ) : AppCompatActivity() {
 

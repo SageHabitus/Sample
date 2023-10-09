@@ -1,4 +1,4 @@
-package com.example.mvvmsample.presentation.base
+package com.example.mvvmsample.presentation.binding
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 
-abstract class BaseFragment<B : ViewBinding>(
+abstract class BindingFragment<B : ViewBinding>(
     private val inflater: (LayoutInflater, ViewGroup?, Boolean) -> B
 ) : Fragment() {
 

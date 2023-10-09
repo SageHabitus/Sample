@@ -11,14 +11,14 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.navGraphViewModels
 import com.example.mvvmsample.R
 import com.example.mvvmsample.databinding.FragmentListBinding
-import com.example.mvvmsample.presentation.base.BaseFragment
+import com.example.mvvmsample.presentation.binding.BindingFragment
 import com.example.mvvmsample.presentation.ui.MainActivityViewModel
 import com.example.mvvmsample.presentation.ui.list.recyclerview.CurrencyAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 @RequiresApi(Build.VERSION_CODES.O)
-class ListFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::inflate) {
+class ListFragment : BindingFragment<FragmentListBinding>(FragmentListBinding::inflate) {
 
     private val mainViewModel: MainActivityViewModel by navGraphViewModels(R.id.nav_graph) {
         defaultViewModelProviderFactory
